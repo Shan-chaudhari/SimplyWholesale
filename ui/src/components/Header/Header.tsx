@@ -12,6 +12,7 @@ import { Search } from "@mui/icons-material";
 import Logo from "../../assets/logo-no-background.svg";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LoginIcon from "@mui/icons-material/Login";
+import AssignmentReturnedIcon from '@mui/icons-material/AssignmentReturned';
 
 function Header() {
   const handleSearch = () => {
@@ -56,11 +57,13 @@ function Header() {
       <Container maxWidth={"xl"}>
         <Toolbar sx={{ justifyContent: "space-between" }}>
           <Box sx={{ display: "flex", alignItems: "center" }}>
-            <img
-              src={Logo}
-              alt="Logo"
-              style={{ height: 40, marginRight: 16 }}
-            />
+            <IconButton component = {Link} to="/home" color = "inherit">
+              <img
+                  src={Logo}
+                  alt="Logo"
+                  style={{ height: 40, marginRight: 16 }}
+              />
+            </IconButton>
             {SearchBar}
           </Box>
           <Grid container direction={'row'} justifyContent={'flex-end'}>
@@ -72,6 +75,9 @@ function Header() {
             <Grid item>
               <IconButton component={Link} to="/login" color="inherit">
                 <LoginIcon />
+              </IconButton>
+              <IconButton component={Link} to="/return" color="inherit">
+                <AssignmentReturnedIcon />
               </IconButton>
             </Grid>
           </Grid>
