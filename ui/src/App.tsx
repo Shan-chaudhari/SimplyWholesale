@@ -6,6 +6,7 @@ import ReturnPage from "./Pages/Home/ReturnPage"
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "../theme.js";
 import LoginPage from "./Pages/Home/LoginPage";
+import CreateAccountPage from "./Pages/Home/CreateAccountPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/login" element={<LoginPage />} />
               <Route path="/return" element={<ReturnPage />} />
+              <Route path="/create-account" element={<CreateAccountPage />} />
             </Routes>
           </Box>
         </div>
