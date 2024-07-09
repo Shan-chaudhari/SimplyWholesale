@@ -76,7 +76,7 @@ function Header() {
               <IconButton component={Link} to="/login" color="inherit">
                 <LoginIcon />
               </IconButton>
-              <IconButton component={Link} to="/return" color="inherit">
+              <IconButton component={Link} to="/account" color="inherit">
                 <AssignmentReturnedIcon />
               </IconButton>
             </Grid>

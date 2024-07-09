@@ -6,12 +6,12 @@ function Product() {
       <CardMedia
         component="img"
         height="140"
-        image="https://via.placeholder.com/140" // Placeholder image
+        image="https://via.placeholder.com/140"
         alt="Product Image"
       />
       <CardContent>
         <Typography variant="body2" color="textSecondary">
-          Description of product that is being sold
+          Lays chips
         </Typography>
         <Typography variant="h6">$100.00</Typography>
         <Typography variant="caption" color="textSecondary">

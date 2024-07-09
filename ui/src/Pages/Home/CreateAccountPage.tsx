@@ -17,7 +17,6 @@ const CreateAccountPage = () => {
         if (!email || !password) {
             setError("Invalid email or password try again");
         } else {
-            // Here you can implement account creation logic
             setDialogOpen(true);
             setError("");
         }

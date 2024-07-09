@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   Grid,
@@ -13,10 +13,17 @@ function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   const handleLogin = () => {
     console.log("Email:", email);
     console.log("Password:", password);
-    // Add login logic here
   };
 
   return (
@@ -26,7 +33,7 @@ function LoginPage() {
         flexDirection="column"
         justifyContent="center"
         alignItems="center"
-        minHeight="100vh"
+        minHeight="80vh"
       >
         <Typography variant="h4" component="h1" gutterBottom>
           Login
@@ -57,6 +64,7 @@ function LoginPage() {
         >
           Login
         </Button>
+
         <Link href="/create-account" variant="body2" sx={{ mt: 2 }}>
           Create an account
         </Link>

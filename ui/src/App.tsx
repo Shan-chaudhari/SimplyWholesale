@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./Pages/Home/HomePage";
-import CartPage from "./Pages/Home/CartPage";
-import ReturnPage from "./Pages/Home/ReturnPage"
+import CartPage from "./Pages/Home/CartPage"
 import { Box, CssBaseline, ThemeProvider } from "@mui/material";
 import theme from "../theme.js";
 import LoginPage from "./Pages/Home/LoginPage";
 import CreateAccountPage from "./Pages/Home/CreateAccountPage";
+import AccountPage from "./Pages/Home/AccountPage";
+import CheckoutPage from "./Pages/Home/CheckoutPage";
 
 function App() {
   return (
@@ -20,8 +21,9 @@ function App() {
               <Route path="/home" element={<HomePage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/return" element={<ReturnPage />} />
               <Route path="/create-account" element={<CreateAccountPage />} />
+              <Route path="/account" element={<AccountPage />} />
+              <Route path="/checkout" element={<CheckoutPage />} />
             </Routes>
           </Box>
         </div>

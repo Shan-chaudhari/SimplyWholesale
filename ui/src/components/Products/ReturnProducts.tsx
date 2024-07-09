@@ -6,7 +6,7 @@ function ReturnProduct() {
             <CardMedia
                 component="img"
                 height="140"
-                image="https://via.placeholder.com/140" // Placeholder image
+                image="https://via.placeholder.com/140"
                 alt="Product Image"
             />
             <CardContent>
