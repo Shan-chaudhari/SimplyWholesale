@@ -10,12 +10,7 @@ function CartPage() {
   const tax = 20;
   const total = subtotal - discount + delivery + tax;
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, []);
+
 
   return (
       <Container maxWidth="xl">

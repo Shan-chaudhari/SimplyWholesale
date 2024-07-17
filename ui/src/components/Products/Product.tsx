@@ -1,8 +1,9 @@
 import {Card, CardContent, CardMedia, Typography} from "@mui/material";
+import {Link} from "react-router-dom";
 
 function Product() {
   return (
-    <Card>
+    <Card component={Link} to="/productpage" color="inherit">
       <CardMedia
         component="img"
         height="140"

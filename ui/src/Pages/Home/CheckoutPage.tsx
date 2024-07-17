@@ -130,7 +130,7 @@ function CheckoutPage() {
                                 <Typography variant="body1">Your order has been successfully placed.</Typography>
                             </DialogContent>
                             <DialogActions>
-                                <Button component={RouterLink} to="/home" color="primary">
+                                <Button component={RouterLink} to="/h" color="primary">
                                     Continue Shopping
                                 </Button>
                             </DialogActions>

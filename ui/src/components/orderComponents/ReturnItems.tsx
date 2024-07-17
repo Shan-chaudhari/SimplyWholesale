@@ -11,7 +11,7 @@ function ReturnItems() {
 
     const fetchReturnItems = () => {
         const mockReturnItems = [
-            { id: 1, itemName: 'Item A', reason: 'Wrong size', status: 'Pending' },
+            { id: 1, itemName: 'Item A', reason: 'Wrong product', status: 'Pending' },
             { id: 2, itemName: 'Item B', reason: 'Defective', status: 'Approved' },
             { id: 3, itemName: 'Item C', reason: 'Changed mind', status: 'Rejected' },
         ];
