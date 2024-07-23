@@ -1,16 +1,12 @@
 import React, { useEffect } from "react";
 import { Container, Grid, Typography, Button, Box, Paper, Divider } from "@mui/material";
 import CartProducts from "../../components/Products/CartProducts";
-import {Link as RouterLink} from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { cartData } from "../../testData/TestData";
 
-function CartPage() {
-  const subtotal = 5000;
-  const discount = 20;
-  const delivery = 20;
-  const tax = 20;
+const CartPage: React.FC = (): JSX.Element => {
+  const { subtotal, discount, delivery, tax } = cartData;
   const total = subtotal - discount + delivery + tax;
-
-
 
   return (
       <Container maxWidth="xl">
@@ -44,10 +40,10 @@ function CartPage() {
               <Typography variant="h5" gutterBottom>
                 Total: ${total.toFixed(2)}
               </Typography>
-              <Button component ={RouterLink} to = "/checkout" variant="contained" color="primary" fullWidth sx={{ mb: 2 }}>
+              <Button component={RouterLink} to="/checkout" variant="contained" color="primary" fullWidth sx={{ mb: 2 }}>
                 Proceed to checkout
               </Button>
-              <Button component={RouterLink} to="/home"  variant="outlined" color="primary" fullWidth>
+              <Button component={RouterLink} to="/home" variant="outlined" color="primary" fullWidth>
                 Continue shopping
               </Button>
             </Paper>

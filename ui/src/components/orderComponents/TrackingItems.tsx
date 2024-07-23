@@ -1,22 +1,13 @@
-
 import { useEffect, useState } from 'react';
 import { Grid, Typography, Card, CardContent } from '@mui/material';
+import { trackingItemsData } from '../../testData/TestData';
 
 function TrackingItems() {
     const [trackingItems, setTrackingItems] = useState([]);
 
     useEffect(() => {
-        fetchTrackingItems();
+        setTrackingItems(trackingItemsData);
     }, []);
-
-    const fetchTrackingItems = () => {
-        const mockTrackingItems = [
-            { id: 1, itemName: 'Package A', status: 'In Transit', location: 'City A' },
-            { id: 2, itemName: 'Package B', status: 'Out for Delivery', location: 'City B' },
-            { id: 3, itemName: 'Package C', status: 'Delivered', location: 'City C' },
-        ];
-        setTrackingItems(mockTrackingItems);
-    };
 
     return (
         <Grid container spacing={3}>
@@ -47,3 +38,4 @@ function TrackingItems() {
 }
 
 export default TrackingItems;
+

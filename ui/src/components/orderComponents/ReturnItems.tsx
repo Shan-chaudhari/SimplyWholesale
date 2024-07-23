@@ -1,22 +1,13 @@
-
 import { useEffect, useState } from 'react';
 import { Grid, Typography, Card, CardContent } from '@mui/material';
+import { returnItemsData } from '../../testData/TestData';
 
 function ReturnItems() {
     const [returnItems, setReturnItems] = useState([]);
 
     useEffect(() => {
-        fetchReturnItems();
+        setReturnItems(returnItemsData);
     }, []);
-
-    const fetchReturnItems = () => {
-        const mockReturnItems = [
-            { id: 1, itemName: 'Item A', reason: 'Wrong product', status: 'Pending' },
-            { id: 2, itemName: 'Item B', reason: 'Defective', status: 'Approved' },
-            { id: 3, itemName: 'Item C', reason: 'Changed mind', status: 'Rejected' },
-        ];
-        setReturnItems(mockReturnItems);
-    };
 
     return (
         <Grid container spacing={3}>

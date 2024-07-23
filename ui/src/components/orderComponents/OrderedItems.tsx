@@ -1,22 +1,13 @@
 import { useEffect, useState } from 'react';
 import { Grid, Typography, Card, CardContent } from '@mui/material';
+import { orderedItemsData } from '../../testData/TestData';
 
 function OrderedItems() {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-
-        fetchOrders();
+        setOrders(orderedItemsData);
     }, []);
-
-    const fetchOrders = () => {
-        const mockOrders = [
-            { id: 1, itemName: 'Product A', quantity: 2, status: 'Processing' },
-            { id: 2, itemName: 'Product B', quantity: 1, status: 'Shipped' },
-            { id: 3, itemName: 'Product C', quantity: 3, status: 'Delivered' },
-        ];
-        setOrders(mockOrders);
-    };
 
     return (
         <Grid container spacing={3}>
